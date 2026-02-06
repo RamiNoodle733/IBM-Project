@@ -1,0 +1,92 @@
+import { DiscoveryQuestion } from "@/types/guided";
+
+export const discoveryQuestions: DiscoveryQuestion[] = [
+  {
+    id: "dq-company-size",
+    category: "Company",
+    question: "How many employees does your organization have?",
+    type: "select",
+    options: ["1-50", "51-200", "201-1000", "1001-5000", "5000+"],
+  },
+  {
+    id: "dq-company-industry",
+    category: "Company",
+    question: "What industry does your organization operate in?",
+    type: "select",
+    options: [
+      "Financial Services",
+      "Healthcare",
+      "Manufacturing",
+      "Retail",
+      "Technology",
+      "Government",
+      "Education",
+      "Other",
+    ],
+  },
+  {
+    id: "dq-company-ai-maturity",
+    category: "Company",
+    question: "How would you describe your organization's current AI maturity?",
+    type: "select",
+    options: [
+      "Exploring - No AI in production",
+      "Experimenting - Running pilot projects",
+      "Scaling - AI in limited production use",
+      "Leading - AI widely adopted across the organization",
+    ],
+  },
+  {
+    id: "dq-needs-pain-points",
+    category: "Needs",
+    question: "What are the primary pain points you are looking to address with AI?",
+    type: "multiselect",
+    options: [
+      "Manual document processing",
+      "Slow customer response times",
+      "Inconsistent data analysis",
+      "High operational costs",
+      "Lack of actionable insights",
+      "Compliance and regulatory challenges",
+    ],
+  },
+  {
+    id: "dq-needs-use-cases",
+    category: "Needs",
+    question: "Which use cases are you most interested in exploring?",
+    type: "multiselect",
+    options: [
+      "Document Q&A",
+      "Text Classification",
+      "Data Summarization",
+      "Conversational AI / Chatbots",
+      "Code Generation",
+      "Content Creation",
+    ],
+  },
+  {
+    id: "dq-needs-timeline",
+    category: "Needs",
+    question: "What is your desired timeline for implementing an AI solution?",
+    type: "select",
+    options: [
+      "Immediately (within 1 month)",
+      "Short-term (1-3 months)",
+      "Medium-term (3-6 months)",
+      "Long-term (6-12 months)",
+      "Exploratory (no fixed timeline)",
+    ],
+  },
+  {
+    id: "dq-context-existing-tools",
+    category: "Context",
+    question: "What tools or platforms are you currently using for data and AI workloads?",
+    type: "text",
+  },
+  {
+    id: "dq-context-decision-process",
+    category: "Context",
+    question: "Who are the key stakeholders involved in the decision-making process?",
+    type: "text",
+  },
+];

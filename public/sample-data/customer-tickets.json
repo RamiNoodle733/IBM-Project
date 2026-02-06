@@ -1,0 +1,22 @@
+[
+  {"text": "The product quality has improved significantly in the latest version. Really impressed with the performance.", "id": 1},
+  {"text": "I've been waiting 3 weeks for my order and still no tracking information. This is unacceptable!", "id": 2},
+  {"text": "Your customer support team was incredibly helpful. They resolved my issue in under 10 minutes.", "id": 3},
+  {"text": "The pricing is too high compared to competitors. Can you offer any discounts for annual subscriptions?", "id": 4},
+  {"text": "The app crashes every time I try to export data. This is a critical bug that needs immediate attention.", "id": 5},
+  {"text": "Love the new dashboard feature! It would be even better if we could customize the widgets.", "id": 6},
+  {"text": "I've been a customer for 5 years and the service has gone downhill. Considering switching providers.", "id": 7},
+  {"text": "The onboarding process was smooth, but the documentation could be more detailed for advanced features.", "id": 8},
+  {"text": "Unable to connect the API to our existing systems. The documentation is outdated and missing key endpoints.", "id": 9},
+  {"text": "Your product is exactly what we needed. It has already saved our team hours of manual work each week.", "id": 10},
+  {"text": "The mobile app is slow and unresponsive. Please optimize for better performance on older devices.", "id": 11},
+  {"text": "Great product overall, but the search functionality needs improvement. It rarely returns relevant results.", "id": 12},
+  {"text": "We need a feature to bulk import users from CSV files. This is a dealbreaker for enterprise adoption.", "id": 13},
+  {"text": "The billing system charged me twice this month. I need an immediate refund and explanation.", "id": 14},
+  {"text": "Excellent integration with Slack and Microsoft Teams. Makes our workflow much more efficient.", "id": 15},
+  {"text": "The security audit revealed several concerns with data encryption. We need this addressed before renewal.", "id": 16},
+  {"text": "Training was comprehensive and well-organized. Our team was productive within the first week.", "id": 17},
+  {"text": "The report generation feature is broken — produces blank PDFs. Already reported this twice.", "id": 18},
+  {"text": "Middling experience. Some features work well, others feel half-baked. The potential is there but needs polish.", "id": 19},
+  {"text": "Need better role-based access controls. Currently, all users have the same permissions which is a compliance issue.", "id": 20}
+]

@@ -1,0 +1,120 @@
+AI & Data Solutions - Frequently Asked Questions
+=================================================
+
+GENERAL
+
+Q: What does the platform do?
+A: Our platform provides enterprise AI and data analytics capabilities that help organizations extract insights from their data faster and more accurately. Core capabilities include document intelligence (AI-powered search and Q&A across your document library), automated text classification (sentiment analysis, categorization, and urgency scoring for customer feedback and support tickets), and data summarization (instant executive reports from raw data). The platform is designed for business users — no data science or programming expertise required.
+
+Q: Who is this platform designed for?
+A: The platform serves teams across multiple functions: customer support teams analyzing ticket volumes and sentiment trends, operations teams generating reports from operational data, compliance teams searching through regulatory documents, sales teams tracking pipeline metrics, and executives who need fast access to business insights. Any team that works with data or documents can benefit.
+
+Q: How is this different from traditional BI tools?
+A: Traditional BI tools require users to know SQL, build queries manually, and design dashboards from scratch. Our platform uses AI to let users ask questions in plain English and get instant answers with source citations. It also automates analysis tasks that would previously require a data analyst — like classifying thousands of customer tickets or generating executive summaries from raw CSV data. Think of it as having a data analyst available to everyone in your organization, 24/7.
+
+
+DATA & FILE FORMATS
+
+Q: What data formats are supported?
+A: For document analysis: PDF, TXT, DOCX, XLSX, CSV, MD (Markdown), HTML, and JSON. For data analytics: CSV, XLSX, JSON, and direct connections to databases including PostgreSQL, MySQL, SQL Server, MongoDB, Snowflake, and BigQuery. We also support API-based data ingestion for real-time data streams.
+
+Q: Is there a file size limit?
+A: Individual file uploads support up to 100 MB through the web interface. For larger datasets, our API supports batch uploads up to 1 GB per file. Most enterprise customers connect directly to their data warehouses, which eliminates file size concerns entirely.
+
+Q: Can I connect to my existing databases?
+A: Yes. We support direct connections to all major database platforms including PostgreSQL, MySQL, SQL Server, Oracle, MongoDB, Snowflake, BigQuery, Amazon Redshift, and Azure SQL. Connections are encrypted end-to-end and can be configured with read-only access for additional security.
+
+
+SECURITY & PRIVACY
+
+Q: How is my data protected?
+A: Security is foundational to our architecture. All data is encrypted at rest using AES-256 encryption and in transit using TLS 1.3. We maintain SOC 2 Type II certification, GDPR compliance, and HIPAA readiness. Our infrastructure runs on ISO 27001 certified data centers with redundancy across multiple availability zones.
+
+Q: Is my data used to train AI models?
+A: No. Customer data is never used to train, fine-tune, or improve any AI models. Your data is processed in isolated environments and is only used to generate responses for your specific queries. We maintain strict data isolation between customers.
+
+Q: Where is my data stored?
+A: We offer data residency options in three regions: United States, European Union, and Asia Pacific. Enterprise customers can select their preferred region during onboarding. On-premise deployment is also available for organizations with strict data sovereignty requirements.
+
+Q: Do you support Single Sign-On (SSO)?
+A: Yes. We support SAML 2.0 and OpenID Connect for SSO integration with identity providers including Okta, Azure AD, Google Workspace, and OneLogin. Multi-factor authentication (MFA) is required for all accounts and cannot be disabled.
+
+Q: What compliance certifications do you hold?
+A: We maintain SOC 2 Type II (audited annually), GDPR compliance, HIPAA readiness (with Business Associate Agreements available), and ISO 27001 certification. FedRAMP authorization is currently in progress. Compliance reports and audit certificates are available upon request for customers under NDA.
+
+
+INTEGRATION
+
+Q: Can I integrate with my existing tools?
+A: Yes. We provide REST APIs for programmatic access to all platform features. We also offer native integrations with popular tools including Slack (notifications and query bot), Microsoft Teams (embedded dashboard sharing), Jira (ticket classification sync), Salesforce (CRM data import), and Zapier (workflow automation). Custom integrations are available for Enterprise customers.
+
+Q: Do you have an API?
+A: Yes. Our comprehensive REST API allows you to programmatically access all platform capabilities including document upload, querying, classification, summarization, and analytics. API documentation is available at docs.dataspherepro.com/api. SDKs are provided for Python, JavaScript/TypeScript, Java, and Go.
+
+Q: Can I embed dashboards in my own application?
+A: Yes. Professional and Enterprise plans support dashboard embedding via iframe or our JavaScript SDK. Embedded dashboards support row-level security, custom styling, and interactive filtering.
+
+
+PRICING & PLANS
+
+Q: How does pricing work?
+A: We offer three tiers: Starter ($49/user/month) for small teams getting started, Professional ($149/user/month) for growing teams that need advanced features like predictive analytics and API access, and Enterprise (custom pricing) for organizations that need unlimited usage, on-premise deployment, or custom SLAs. All plans include a 14-day free trial. Annual billing saves 20%.
+
+Q: Is there a free trial?
+A: Yes. Every plan includes a 14-day free trial with full feature access. No credit card is required to start the trial. At the end of the trial, you can choose a plan or your account will be paused (not deleted) so you can resume anytime.
+
+Q: What happens if I exceed my plan limits?
+A: You will receive notifications at 80% and 95% usage. If you reach your limit (for example, AI query limits), additional queries are paused until the next billing cycle or until you upgrade your plan. We never charge overage fees without explicit consent.
+
+
+IMPLEMENTATION & ONBOARDING
+
+Q: How long does implementation take?
+A: Most teams are productive within 2-3 days. The cloud platform requires no installation — sign up, connect a data source, and start querying. Enterprise deployments with custom integrations, SSO setup, and data migration typically take 2-4 weeks with dedicated support from our Customer Success team.
+
+Q: Do you provide training?
+A: Yes. We offer multiple training resources: DataSphere Academy (self-paced online courses), weekly live webinars covering specific features and use cases, a certification program for power users, and custom training sessions (virtual or on-site) for Enterprise customers. All training resources are included at no additional cost.
+
+Q: What support is available?
+A: Support varies by plan: Starter includes email support with 48-hour response time, Professional includes priority email and in-app chat with 4-hour response time, and Enterprise includes a dedicated support team with 1-hour response time plus phone support. All customers have access to our community forum and comprehensive documentation.
+
+
+AI ACCURACY & RELIABILITY
+
+Q: How accurate are the AI features?
+A: Accuracy depends on the specific feature and use case. Document Q&A achieves 95%+ accuracy on standard enterprise documents when the answer exists in the provided context. Text classification achieves 90%+ accuracy on standard categories (sentiment, urgency). The platform always provides confidence scores so users know when to trust automated results and when to verify manually.
+
+Q: What if the AI gives a wrong answer?
+A: Every AI response includes source citations, allowing users to verify any answer back to the original data. We recommend a human-in-the-loop approach for critical decisions: use the AI to accelerate analysis, but have domain experts validate outputs for high-stakes decisions. Users can also provide feedback on AI responses to help identify areas where the system may need adjustment.
+
+Q: Can I customize the AI for my specific use case?
+A: Yes. Enterprise customers can customize classification categories, define custom entity types for document extraction, and create domain-specific prompt templates. The platform adapts to your terminology and business context over time based on usage patterns and explicit configuration — all without requiring any data to leave your environment.
+
+
+CUSTOMIZATION
+
+Q: Can I customize the dashboard look and feel?
+A: Yes. Dashboards support custom color themes, logo placement, and typography settings. Enterprise customers can apply their complete brand guidelines including custom CSS. Embedded dashboards inherit your application's styling.
+
+Q: Can I create custom report templates?
+A: Yes. You can create reusable report templates that define the structure, metrics, and formatting for generated reports. Templates can be shared across your organization and associated with specific data sources for one-click report generation.
+
+Q: Can I define custom classification categories?
+A: Yes. While the platform comes with standard categories for common use cases (sentiment, urgency, topic), you can define entirely custom classification schemas. Provide example texts for each category and the AI adapts to your specific taxonomy.
+
+
+SUPPORT CHANNELS
+
+For immediate assistance:
+- In-app chat: Click the help icon in the bottom-right corner (Professional and Enterprise)
+- Email: support@dataspherepro.com
+- Phone: 1-800-555-DATA (Enterprise only, 24/7)
+- Documentation: docs.dataspherepro.com
+- Community forum: community.dataspherepro.com
+- Status page: status.dataspherepro.com
+
+For sales inquiries:
+- Email: sales@dataspherepro.com
+- Schedule a demo: dataspherepro.com/demo
+
+© 2024 DataSphere Technologies, Inc. All rights reserved.

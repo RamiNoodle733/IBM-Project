@@ -1,0 +1,30 @@
+# Dependencies
+node_modules
+
+# Next.js
+.next/
+out/
+
+# Prisma
+/src/generated/prisma
+prisma/dev.db
+prisma/dev.db-journal
+dev.db
+dev.db-journal
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.tsbuildinfo
+next-env.d.ts

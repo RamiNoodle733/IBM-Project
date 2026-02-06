@@ -1,0 +1,44 @@
+{
+  "name": "ibm-demo-studio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "postinstall": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:reset": "prisma db push --force-reset && tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@carbon/charts-react": "^1.27.2",
+    "@carbon/icons-react": "^11.74.0",
+    "@carbon/react": "^1.100.0",
+    "@ibm/plex": "^6.4.1",
+    "@prisma/client": "^6.19.2",
+    "d3": "^7.9.0",
+    "date-fns": "^4.1.0",
+    "nanoid": "^5.1.6",
+    "next": "16.1.6",
+    "openai": "^6.18.0",
+    "papaparse": "^5.5.3",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/node": "^20",
+    "@types/papaparse": "^5.5.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "dotenv": "^17.2.4",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "prisma": "^6.19.2",
+    "sass": "^1.97.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  }
+}

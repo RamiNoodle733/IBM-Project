@@ -1,0 +1,50 @@
+Date,Region,Product,Revenue,Units,Customer_Segment
+2024-01-15,North America,DataSphere Pro,125000,50,Enterprise
+2024-01-15,Europe,DataSphere Pro,98000,38,Enterprise
+2024-01-15,Asia Pacific,AI Analytics Suite,67000,120,Mid-Market
+2024-01-22,North America,Cloud Connect,43000,85,Small Business
+2024-01-22,Europe,AI Analytics Suite,89000,160,Mid-Market
+2024-01-22,North America,DataSphere Pro,156000,62,Enterprise
+2024-02-01,Asia Pacific,Cloud Connect,34000,68,Small Business
+2024-02-01,North America,AI Analytics Suite,112000,200,Enterprise
+2024-02-01,Europe,DataSphere Pro,143000,55,Enterprise
+2024-02-08,North America,Cloud Connect,52000,104,Mid-Market
+2024-02-08,Asia Pacific,DataSphere Pro,87000,34,Enterprise
+2024-02-08,Europe,Cloud Connect,38000,76,Small Business
+2024-02-15,North America,DataSphere Pro,167000,67,Enterprise
+2024-02-15,Europe,AI Analytics Suite,94000,175,Mid-Market
+2024-02-15,Asia Pacific,AI Analytics Suite,72000,130,Mid-Market
+2024-03-01,North America,AI Analytics Suite,128000,230,Enterprise
+2024-03-01,Europe,DataSphere Pro,115000,45,Enterprise
+2024-03-01,Asia Pacific,Cloud Connect,41000,82,Small Business
+2024-03-08,North America,Cloud Connect,58000,116,Mid-Market
+2024-03-08,Europe,Cloud Connect,44000,88,Small Business
+2024-03-08,Asia Pacific,DataSphere Pro,95000,37,Enterprise
+2024-03-15,North America,DataSphere Pro,178000,71,Enterprise
+2024-03-15,Europe,AI Analytics Suite,103000,190,Enterprise
+2024-03-15,Asia Pacific,AI Analytics Suite,78000,140,Mid-Market
+2024-04-01,North America,AI Analytics Suite,135000,245,Enterprise
+2024-04-01,Europe,DataSphere Pro,129000,50,Enterprise
+2024-04-01,Asia Pacific,Cloud Connect,47000,94,Mid-Market
+2024-04-08,North America,Cloud Connect,63000,126,Mid-Market
+2024-04-08,Europe,Cloud Connect,49000,98,Small Business
+2024-04-08,Asia Pacific,DataSphere Pro,101000,40,Enterprise
+2024-04-15,North America,DataSphere Pro,189000,76,Enterprise
+2024-04-15,Europe,AI Analytics Suite,108000,195,Enterprise
+2024-04-15,Asia Pacific,AI Analytics Suite,83000,150,Mid-Market
+2024-05-01,North America,AI Analytics Suite,142000,260,Enterprise
+2024-05-01,Europe,DataSphere Pro,134000,52,Enterprise
+2024-05-01,Asia Pacific,Cloud Connect,51000,102,Mid-Market
+2024-05-08,North America,Cloud Connect,67000,134,Mid-Market
+2024-05-08,Europe,Cloud Connect,53000,106,Small Business
+2024-05-08,North America,DataSphere Pro,195000,78,Enterprise
+2024-05-15,Asia Pacific,DataSphere Pro,108000,42,Enterprise
+2024-05-15,Europe,AI Analytics Suite,114000,210,Enterprise
+2024-05-15,North America,AI Analytics Suite,148000,270,Enterprise
+2024-06-01,North America,DataSphere Pro,203000,81,Enterprise
+2024-06-01,Europe,DataSphere Pro,141000,55,Enterprise
+2024-06-01,Asia Pacific,AI Analytics Suite,88000,160,Mid-Market
+2024-06-08,North America,Cloud Connect,72000,144,Mid-Market
+2024-06-08,Europe,Cloud Connect,56000,112,Small Business
+2024-06-08,Asia Pacific,Cloud Connect,54000,108,Mid-Market
+2024-06-15,North America,AI Analytics Suite,155000,280,Enterprise

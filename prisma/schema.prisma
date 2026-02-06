@@ -1,0 +1,99 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Demo {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  description String
+  category    String
+  icon        String
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  sessions    DemoSession[]
+  documents   Document[]
+}
+
+model Document {
+  id          String   @id @default(cuid())
+  demoId      String
+  demo        Demo     @relation(fields: [demoId], references: [id])
+  fileName    String
+  fileType    String
+  content     String
+  isPreloaded Boolean  @default(false)
+  createdAt   DateTime @default(now())
+}
+
+model DemoSession {
+  id              String   @id @default(cuid())
+  demoId          String
+  demo            Demo     @relation(fields: [demoId], references: [id])
+  shareId         String?  @unique
+  prospectName    String?
+  prospectEmail   String?
+  companyName     String?
+  industry        String?
+  painPoints      String?
+  successMetrics  String?
+  status          String   @default("active")
+  startedAt       DateTime @default(now())
+  completedAt     DateTime?
+  durationSeconds Int?
+
+  interactions    Interaction[]
+  analyticsEvents AnalyticsEvent[]
+  followUps       FollowUp[]
+}
+
+model Interaction {
+  id        String      @id @default(cuid())
+  sessionId String
+  session   DemoSession @relation(fields: [sessionId], references: [id])
+  type      String
+  role      String
+  content   String
+  metadata  String?
+  createdAt DateTime    @default(now())
+}
+
+model AnalyticsEvent {
+  id        String       @id @default(cuid())
+  sessionId String?
+  session   DemoSession? @relation(fields: [sessionId], references: [id])
+  eventType String
+  eventData String?
+  page      String?
+  referrer  String?
+  createdAt DateTime     @default(now())
+}
+
+model FollowUp {
+  id          String      @id @default(cuid())
+  sessionId   String
+  session     DemoSession @relation(fields: [sessionId], references: [id])
+  recapEmail  String
+  actionPlan  String
+  valueProps  String
+  generatedAt DateTime    @default(now())
+}
+
+model LeadScore {
+  id           String   @id @default(cuid())
+  sessionId    String   @unique
+  prospectName String?
+  companyName  String?
+  email        String?
+  score        Int      @default(0)
+  signals      String
+  recommended  String?
+  calculatedAt DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
