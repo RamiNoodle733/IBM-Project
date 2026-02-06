@@ -18,10 +18,10 @@ export function HeaderBar() {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    document.documentElement.setAttribute(
-      "data-carbon-theme",
-      dark ? "g100" : "white"
-    );
+    const theme = dark ? "g100" : "white";
+    document.documentElement.setAttribute("data-carbon-theme", theme);
+    document.body.style.backgroundColor = dark ? "#161616" : "#ffffff";
+    document.body.style.color = dark ? "#f4f4f4" : "#161616";
   }, [dark]);
 
   return (
@@ -30,22 +30,39 @@ export function HeaderBar() {
         AI Demo Studio
       </HeaderName>
       <HeaderNavigation aria-label="Main">
-        <HeaderMenuItem as={Link} href="/demos" isCurrentPage={pathname.startsWith("/demos")}>
+        <HeaderMenuItem
+          as={Link}
+          href="/demos"
+          isCurrentPage={pathname.startsWith("/demos")}
+        >
           Demos
         </HeaderMenuItem>
-        <HeaderMenuItem as={Link} href="/guided" isCurrentPage={pathname.startsWith("/guided")}>
+        <HeaderMenuItem
+          as={Link}
+          href="/guided"
+          isCurrentPage={pathname.startsWith("/guided")}
+        >
           Guided Mode
         </HeaderMenuItem>
-        <HeaderMenuItem as={Link} href="/follow-up" isCurrentPage={pathname.startsWith("/follow-up")}>
+        <HeaderMenuItem
+          as={Link}
+          href="/follow-up"
+          isCurrentPage={pathname.startsWith("/follow-up")}
+        >
           Follow-up
         </HeaderMenuItem>
-        <HeaderMenuItem as={Link} href="/analytics" isCurrentPage={pathname === "/analytics"}>
+        <HeaderMenuItem
+          as={Link}
+          href="/analytics"
+          isCurrentPage={pathname === "/analytics"}
+        >
           Analytics
         </HeaderMenuItem>
       </HeaderNavigation>
       <HeaderGlobalBar>
         <HeaderGlobalAction
-          aria-label="Toggle theme"
+          aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+          tooltipAlignment="end"
           onClick={() => setDark((d) => !d)}
         >
           {dark ? <Light size={20} /> : <Asleep size={20} />}

@@ -53,7 +53,12 @@ export function FollowUpClient({ sessionId }: { sessionId: string }) {
         body: JSON.stringify({ sessionId }),
       });
       const data = await res.json();
-      setFollowUp(data);
+      const fu = data.followUp || data;
+      setFollowUp({
+        recapEmail: fu.recapEmail,
+        actionPlan: Array.isArray(fu.actionPlan) ? fu.actionPlan : JSON.parse(fu.actionPlan || "[]"),
+        valueProps: Array.isArray(fu.valueProps) ? fu.valueProps : JSON.parse(fu.valueProps || "[]"),
+      });
     } finally {
       setGenerating(false);
     }
