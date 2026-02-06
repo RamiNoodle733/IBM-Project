@@ -21,12 +21,15 @@ body {
   font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--cds-background, #ffffff);
+  color: var(--cds-text-primary, #161616);
 }
 
 // ── Header offset: Carbon Header is fixed, so push content below it ──
 .main-content {
   padding-top: var(--header-height);
   min-height: 100vh;
+  background: var(--cds-background, #ffffff);
 }
 
 // ── Page container ──
@@ -44,6 +47,7 @@ body {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     letter-spacing: -0.02em;
+    color: var(--cds-text-primary, #161616);
   }
 
   p {
@@ -64,9 +68,10 @@ body {
 .demo-card {
   cursor: pointer;
   transition: box-shadow 0.15s ease, transform 0.15s ease;
+  background: var(--cds-layer-01, #f4f4f4);
 
   &:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
     transform: translateY(-1px);
   }
 
@@ -75,6 +80,7 @@ body {
     margin-bottom: 0.375rem;
     font-weight: 600;
     font-size: 1rem;
+    color: var(--cds-text-primary, #161616);
   }
 
   p {
@@ -111,6 +117,7 @@ body {
     font-size: 0.875rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
+    color: var(--cds-text-primary, #161616);
   }
 
   .suggested-questions {
@@ -127,7 +134,7 @@ body {
     padding: 0.5rem 0.75rem;
     border: 1px solid var(--cds-border-subtle, #e0e0e0);
     border-radius: 4px;
-    background: transparent;
+    background: var(--cds-layer-02, #e0e0e0);
     font-size: 0.75rem;
     color: var(--cds-text-primary, #161616);
     cursor: pointer;
@@ -154,6 +161,7 @@ body {
   border-radius: 4px;
   overflow: hidden;
   height: 100%;
+  background: var(--cds-layer-01, #f4f4f4);
 }
 
 .chat-messages {
@@ -163,6 +171,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  background: var(--cds-background, #ffffff);
 }
 
 .chat-message {
@@ -182,6 +191,7 @@ body {
   &--assistant {
     align-self: flex-start;
     background: var(--cds-layer-01, #f4f4f4);
+    color: var(--cds-text-primary, #161616);
     border: 1px solid var(--cds-border-subtle, #e0e0e0);
     border-bottom-left-radius: 4px;
   }
@@ -236,6 +246,7 @@ body {
   padding: 0.75rem;
   margin-bottom: 0.5rem;
   letter-spacing: 0.05em;
+  color: var(--cds-text-primary, #161616);
 }
 
 .guided-step {
@@ -258,6 +269,7 @@ body {
       position: relative;
       font-size: 0.875rem;
       line-height: 1.5;
+      color: var(--cds-text-primary, #161616);
 
       &::before {
         content: "\2022";
@@ -279,6 +291,7 @@ body {
 
 .metric-card {
   padding: 1.25rem;
+  background: var(--cds-layer-01, #f4f4f4);
 
   .metric-card__label {
     font-size: 0.75rem;
@@ -294,6 +307,7 @@ body {
     font-weight: 300;
     margin-bottom: 0.375rem;
     letter-spacing: -0.02em;
+    color: var(--cds-text-primary, #161616);
   }
 }
 
@@ -315,6 +329,7 @@ body {
     font-size: 0.875rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
+    color: var(--cds-text-primary, #161616);
   }
 }
 
@@ -325,6 +340,7 @@ body {
   h3 {
     margin-bottom: 1rem;
     font-weight: 600;
+    color: var(--cds-text-primary, #161616);
   }
 }
 
@@ -337,6 +353,7 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 0.875rem;
   line-height: 1.6;
+  color: var(--cds-text-primary, #161616);
 }
 
 .action-plan-item {
@@ -354,6 +371,14 @@ body {
     min-width: 120px;
     font-weight: 500;
   }
+
+  strong {
+    color: var(--cds-text-primary, #161616);
+  }
+
+  p {
+    color: var(--cds-text-secondary, #525252);
+  }
 }
 
 .value-prop-card {
@@ -361,15 +386,18 @@ body {
   margin-bottom: 0.75rem;
   border: 1px solid var(--cds-border-subtle, #e0e0e0);
   border-radius: 4px;
+  background: var(--cds-layer-01, #f4f4f4);
 
   h4 {
     margin-bottom: 0.5rem;
     font-weight: 600;
+    color: var(--cds-text-primary, #161616);
   }
 
   p {
     line-height: 1.5;
     font-size: 0.875rem;
+    color: var(--cds-text-primary, #161616);
   }
 
   .value-prop-card__pain-point {
@@ -407,9 +435,17 @@ body {
 .hero {
   padding: 5rem 2rem 4rem;
   text-align: center;
-  background: linear-gradient(135deg, var(--cds-layer-01, #f4f4f4) 0%, var(--cds-background, #fff) 100%);
-  border-bottom: 1px solid var(--cds-border-subtle, #e0e0e0);
-  margin: -2rem -2rem 2rem;
+  background: var(--cds-layer-01, #f4f4f4);
+  border-bottom: 3px solid var(--cds-interactive, #0f62fe);
+
+  .hero__eyebrow {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cds-interactive, #0f62fe);
+    margin-bottom: 0.75rem;
+  }
 
   .hero__title {
     font-size: 3.5rem;
@@ -420,6 +456,7 @@ body {
     margin-right: auto;
     letter-spacing: -0.03em;
     line-height: 1.1;
+    color: var(--cds-text-primary, #161616);
   }
 
   .hero__subtitle {
@@ -444,6 +481,7 @@ body {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
+    color: var(--cds-text-primary, #161616);
   }
 }
 
@@ -454,11 +492,19 @@ body {
 }
 
 .feature-card {
+  background: var(--cds-layer-01, #f4f4f4);
+  transition: box-shadow 0.15s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
   h3 {
     margin-top: 0.75rem;
     margin-bottom: 0.375rem;
     font-weight: 600;
     font-size: 1rem;
+    color: var(--cds-text-primary, #161616);
   }
 
   p {
@@ -475,6 +521,7 @@ body {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
+    color: var(--cds-text-primary, #161616);
   }
 }
 
@@ -507,6 +554,7 @@ body {
   h4 {
     font-weight: 600;
     margin-bottom: 0.375rem;
+    color: var(--cds-text-primary, #161616);
   }
 
   p {
@@ -524,10 +572,13 @@ body {
   text-align: center;
   cursor: pointer;
   transition: border-color 0.2s, background 0.2s;
+  background: var(--cds-layer-01, #f4f4f4);
+  color: var(--cds-text-primary, #161616);
 
   h3 {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    color: var(--cds-text-primary, #161616);
   }
 
   p {
@@ -552,6 +603,7 @@ body {
     padding: 0.375rem 0.75rem;
     text-align: left;
     border-bottom: 1px solid var(--cds-border-subtle, #e0e0e0);
+    color: var(--cds-text-primary, #161616);
   }
 
   th {
@@ -591,6 +643,7 @@ body {
 // ── Footer ──
 .footer {
   padding: 2rem;
+  margin-top: 2rem;
   border-top: 1px solid var(--cds-border-subtle, #e0e0e0);
   text-align: center;
   font-size: 0.875rem;

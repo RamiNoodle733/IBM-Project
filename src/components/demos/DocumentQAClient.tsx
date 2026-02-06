@@ -50,6 +50,9 @@ export function DocumentQAClient({ preloadedDocs, demoId }: { preloadedDocs: Doc
         body: JSON.stringify({ question, documentIds: selectedDocs }),
       });
       const data = await res.json();
+      if (!res.ok || data.error) {
+        throw new Error(data.error || "Request failed");
+      }
       setMessages((prev) => [
         ...prev,
         { role: "assistant", content: data.answer, citations: data.citations },
