@@ -16,43 +16,26 @@ import { useThemeContext } from "./ThemeProvider";
 function IBM8BarLogo() {
   return (
     <svg
-      width="65"
-      height="26"
-      viewBox="0 0 65 26"
-      fill="currentColor"
+      width="56"
+      height="22"
+      viewBox="-10 -10 1050 420"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="IBM"
     >
-      {/* I */}
-      <rect x="0" y="0" width="13" height="2.5" />
-      <rect x="0" y="4" width="13" height="2.5" />
-      <rect x="3.5" y="8" width="6" height="2.5" />
-      <rect x="3.5" y="12" width="6" height="2.5" />
-      <rect x="3.5" y="16" width="6" height="2.5" />
-      <rect x="0" y="20" width="13" height="2.5" />
-      <rect x="0" y="23.5" width="13" height="2.5" />
-      {/* B */}
-      <rect x="17" y="0" width="16" height="2.5" />
-      <rect x="17" y="4" width="16.5" height="2.5" />
-      <rect x="20.5" y="8" width="9" height="2.5" />
-      <rect x="20.5" y="12" width="11" height="2.5" />
-      <rect x="20.5" y="16" width="9.5" height="2.5" />
-      <rect x="17" y="20" width="16.5" height="2.5" />
-      <rect x="17" y="23.5" width="16" height="2.5" />
-      {/* M */}
-      <rect x="38" y="0" width="5" height="2.5" />
-      <rect x="53" y="0" width="5" height="2.5" />
-      <rect x="38" y="4" width="7" height="2.5" />
-      <rect x="51" y="4" width="7" height="2.5" />
-      <rect x="41.5" y="8" width="13" height="2.5" />
-      <rect x="41.5" y="12" width="5" height="2.5" />
-      <rect x="49.5" y="12" width="5" height="2.5" />
-      <rect x="41.5" y="16" width="3" height="2.5" />
-      <rect x="51.5" y="16" width="3" height="2.5" />
-      <rect x="38" y="20" width="8.5" height="2.5" />
-      <rect x="49.5" y="20" width="8.5" height="2.5" />
-      <rect x="38" y="23.5" width="8.5" height="2.5" />
-      <rect x="49.5" y="23.5" width="8.5" height="2.5" />
+      <defs>
+        <clipPath id="ibm-clip">
+          <path d="M0-1v83h55.937v236H1.523v82h194.65v-82h-55.938V82h54.414V-1zm554.02 1v82h55.938v236h-54.414v82h138.71V171.84l82.656 228.08 1.68.04 81.172-228.12V400h140.23v-82h-55.938V82h54.415V0h-156.33l-64.726 182.89L711.866 0z" />
+          <path d="M222.23 0v82h55.937v130h215.31v-24.928s18.011-14.042 23.75-27.367l11.523-25.855s5.352-14.472 5.352-27.405l-2.305-25.855s-3.616-21.063-9.922-27.328l-22.266-25.895S471.276 0 433.75 0zm140.23 82h81.992v76H362.46z" id="ibm-b" />
+          <use href="#ibm-b" transform="matrix(1 0 0 -1 0 400)" />
+        </clipPath>
+      </defs>
+      <path
+        clipPath="url(#ibm-clip)"
+        d="M0 13.683h1030v53.232H0m0 53.232h975v53.242H0v53.222h975v53.222H0m0 53.242h1030v53.242H0"
+        strokeWidth="27.37"
+        stroke="currentColor"
+      />
     </svg>
   );
 }
