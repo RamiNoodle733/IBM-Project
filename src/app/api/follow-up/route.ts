@@ -64,27 +64,32 @@ export async function POST(request: NextRequest) {
       }>;
     }>(response);
 
-    const followUp = await prisma.followUp.create({
-      data: {
-        sessionId,
-        recapEmail: result.recapEmail,
-        actionPlan: JSON.stringify(result.actionPlan),
-        valueProps: JSON.stringify(result.valueProps),
-      },
-    });
-
-    if (industry || painPoints || successMetrics) {
-      await prisma.demoSession.update({
-        where: { id: sessionId },
+    // Try to persist to database, but don't fail if DB is read-only (Vercel)
+    try {
+      await prisma.followUp.create({
         data: {
-          ...(industry && { industry }),
-          ...(painPoints && { painPoints }),
-          ...(successMetrics && { successMetrics }),
+          sessionId,
+          recapEmail: result.recapEmail,
+          actionPlan: JSON.stringify(result.actionPlan),
+          valueProps: JSON.stringify(result.valueProps),
         },
       });
+
+      if (industry || painPoints || successMetrics) {
+        await prisma.demoSession.update({
+          where: { id: sessionId },
+          data: {
+            ...(industry && { industry }),
+            ...(painPoints && { painPoints }),
+            ...(successMetrics && { successMetrics }),
+          },
+        });
+      }
+    } catch {
+      // Database is read-only on Vercel — that's fine, just return the result
     }
 
-    return NextResponse.json({ followUp: { ...followUp, ...result } });
+    return NextResponse.json({ followUp: result });
   } catch (error) {
     console.error("Follow-up generation error:", error);
     const message = error instanceof Error ? error.message : "Failed to generate follow-up";

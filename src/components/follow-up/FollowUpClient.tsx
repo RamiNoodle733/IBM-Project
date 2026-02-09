@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Button, Tile, InlineLoading, Tabs, TabList, Tab, TabPanels, TabPanel } from "@carbon/react";
+import { Button, Tile, InlineLoading } from "@carbon/react";
 import { Email, Copy, Checkmark } from "@carbon/icons-react";
 
 interface ActionPlanStep {
@@ -28,6 +28,7 @@ export function FollowUpClient({ sessionId }: { sessionId: string }) {
   const [generating, setGenerating] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState(0);
 
   useEffect(() => {
     fetch(`/api/sessions/${sessionId}`)
@@ -118,14 +119,36 @@ export function FollowUpClient({ sessionId }: { sessionId: string }) {
       )}
 
       {followUp && (
-        <Tabs>
-          <TabList aria-label="Follow-up sections">
-            <Tab>Recap Email</Tab>
-            <Tab>Action Plan ({followUp.actionPlan.length})</Tab>
-            <Tab>Value Propositions ({followUp.valueProps.length})</Tab>
-          </TabList>
-          <TabPanels>
-            <TabPanel>
+        <div>
+          <div className="custom-tabs" role="tablist" aria-label="Follow-up sections">
+            <button
+              role="tab"
+              aria-selected={activeTab === 0}
+              className={`custom-tab ${activeTab === 0 ? "custom-tab--selected" : ""}`}
+              onClick={() => setActiveTab(0)}
+            >
+              Recap Email
+            </button>
+            <button
+              role="tab"
+              aria-selected={activeTab === 1}
+              className={`custom-tab ${activeTab === 1 ? "custom-tab--selected" : ""}`}
+              onClick={() => setActiveTab(1)}
+            >
+              Action Plan ({followUp.actionPlan.length})
+            </button>
+            <button
+              role="tab"
+              aria-selected={activeTab === 2}
+              className={`custom-tab ${activeTab === 2 ? "custom-tab--selected" : ""}`}
+              onClick={() => setActiveTab(2)}
+            >
+              Value Propositions ({followUp.valueProps.length})
+            </button>
+          </div>
+
+          {activeTab === 0 && (
+            <div role="tabpanel" style={{ paddingTop: "1rem" }}>
               <div className="follow-up-section">
                 <div className="copy-button-inline">
                   <Button
@@ -139,8 +162,11 @@ export function FollowUpClient({ sessionId }: { sessionId: string }) {
                 </div>
                 <div className="email-preview">{followUp.recapEmail}</div>
               </div>
-            </TabPanel>
-            <TabPanel>
+            </div>
+          )}
+
+          {activeTab === 1 && (
+            <div role="tabpanel" style={{ paddingTop: "1rem" }}>
               <div className="follow-up-section">
                 <h3>Recommended Next Steps</h3>
                 {followUp.actionPlan.length === 0 ? (
@@ -159,8 +185,11 @@ export function FollowUpClient({ sessionId }: { sessionId: string }) {
                   ))
                 )}
               </div>
-            </TabPanel>
-            <TabPanel>
+            </div>
+          )}
+
+          {activeTab === 2 && (
+            <div role="tabpanel" style={{ paddingTop: "1rem" }}>
               <div className="follow-up-section">
                 <h3>Tailored Value Propositions</h3>
                 {followUp.valueProps.length === 0 ? (
@@ -177,9 +206,9 @@ export function FollowUpClient({ sessionId }: { sessionId: string }) {
                   ))
                 )}
               </div>
-            </TabPanel>
-          </TabPanels>
-        </Tabs>
+            </div>
+          )}
+        </div>
       )}
     </div>
   );
